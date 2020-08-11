@@ -1,0 +1,165 @@
+// use nib
+@import 'nib'
+
+body
+  font-family "Source Sans Pro"
+  margin 0
+  color #222
+  font-weight 200
+a
+  color lightsalmon
+p, blockquote
+  line-height 1.6em
+p
+  margin 0 0 2em
+blockquote
+  border-left 1px solid #ddd
+  margin 0 0 1em
+  padding 0 0 0 1.5em
+h1, h2
+  font-weight 200
+  color #666
+h1
+  font-size 3em
+h2
+  font-size 2.4em
+  margin 0
+.date
+  color #ccc
+  font-weight 200
+.canvas
+  max-width 80em
+  margin 0 auto
+  padding 0 2em 10em
+.page-header
+  padding 2em 0 1em
+  margin 0 0 4em
+  text-align center
+  border-bottom 1px solid #eee
+  h1
+    margin 0
+    padding 0 0 .2em
+    display inline-block
+  .summary
+    letter-spacing .2em
+    color #999
+article
+  margin 0 0 6em
+  padding 0 0 6em
+  box-sizing border-box
+  position relative
+  &:after
+    content ''
+    display block
+    position absolute
+    width 30em
+    left 50%
+    font-size 1em
+    border-bottom 1px solid #ccc
+    margin-left -15em
+    bottom 0
+    z-index 1
+  &:before
+    content '\021D5'
+    display block
+    position absolute
+    text-align center
+    color #ccc
+    font-size 1.4em
+    top 100%
+    left 50%
+    width 1.6em
+    height 1.5em
+    padding .1em 0 0
+    margin -.8em 0 0 -.8em
+    border-radius 50%
+    border 1px solid #ccc
+    background #fff
+    z-index 2
+  &:last-child
+    &:after,
+    &:before
+      display none
+@media screen and (min-width: 40em)
+  .sticky .stick
+    position fixed
+    top 15px
+    transition opacity .5s
+    opacity 1
+    width calc(45% - 5.8em)
+  .sticky.hide .stick
+    opacity 0
+  article
+    position relative
+  article
+    display table 
+  article .content,
+  article header
+    display table-cell
+    vertical-align top
+    h2
+      margin 0 0 .4em
+  article .content
+    font-size 1.2em
+  article header
+    width 45%
+    padding-right 4em
+
+.error-wrapper
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+    text-align center
+    .title
+        font-size 32px
+        color #000
+
+.home-btn, 
+    .home-btn:focus, 
+    .home-btn:hover, 
+    .home-btn:visited
+    text-decoration none
+    font-size 14px
+    color #55aa29
+    padding 17px 77px
+    border 1px solid #55aa29
+    -webkit-border-radius 3px
+    -moz-border-radius 3px
+    -o-border-radius 3px
+    border-radius 3px
+    display block
+    margin 20px 0
+    width max-content
+    background-color transparent
+    outline 0
+
+.man-icon
+    background url(https://img.pngio.com/emoticon-emoji-kawaii-pink-cute-uwu-uwu-transparent-1024_1024.png) center center no-repeat
+    display inline-block
+    height 150px
+    width 318px
+    background-size cover
+
+.info
+    white-space pre-line
+    display block
+    color #424040
+
+.options
+    margin 10px 0px
+    display block
+    color #4c4545
+
+.contact
+    font-size 0.7rem
+    display block
+    a
+        color #635757 !important
+        text-decoration none
+
+.title
+    color #4c4545 !important
+
+#login, #frame
+    display none

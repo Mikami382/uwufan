@@ -1,0 +1,22 @@
+.canvas
+  header.page-header
+    h1 Floating Headers
+    p.summary A Simplistic Blog Pattern
+  section
+    each val in ['Simple Post With a Longer Header', 'Yet Another Post', 'A Hello World Post']
+      article
+        header
+          .stick
+            h2= val
+            p.date 
+              | by 
+              a(href='#') Sly Stallone 
+              | on Nov. 12th 2014
+        div.content
+          p Lorem ipsum dolor sit amet consectetur adipiscing elit. Etiam non sodales dui. Sed sagittis tincidunt massa, quis porta mi finibus vel. 
+          p Aliquam ornare porttitor dapibus. Ut non quam tellus. Ut at urna feugiat tellus maximus consectetur. Integer tincidunt sapien ac nibh faucibus mattis. Nulla enim purus, auctor condimentum metus efficitur, commodo rutrum diam. Nunc non libero dolor.
+          blockquote Donec in fermentum ex, a commodo nulla. Nam imperdiet lacinia nunc nec varius. Ut mattis eget sapien non pellentesque. Curabitur vestibulum eu enim in mattis. Praesent rutrum, magna in venenatis placerat, nibh ex commodo nisl, ac bibendum mauris lectus non ligula.
+          p Donec in fermentum ex, a commodo nulla. Nam imperdiet lacinia nunc nec varius. Ut mattis eget sapien non pellentesque. Curabitur vestibulum eu enim in mattis. Praesent rutrum, magna in venenatis placerat, nibh ex commodo nisl, ac bibendum mauris lectus non ligula.
+          p Donec in fermentum ex, a commodo nulla. Nam imperdiet lacinia nunc nec varius. Ut mattis eget sapien non pellentesque. Curabitur vestibulum eu enim in mattis. Praesent rutrum, magna in venenatis placerat, nibh ex commodo nisl, ac bibendum mauris lectus non ligula.
+          
+script(src='./js/sticky.js')

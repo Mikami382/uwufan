@@ -1,0 +1,69 @@
+doctype html
+html(lang='en-US')
+  head
+    title Fow aww youw uwu nyeeds
+    include partials/header.pug
+    script(src='./js/vegas.js')
+    link(href='./css/vegas.css', rel="stylesheet")
+    link(href='./css/rainbow.css', rel="stylesheet")
+    style.
+      body{
+          margin: 0;
+          padding: 0;
+          font-weight: 400;
+          font-size: 12px;
+          letter-spacing: 0.1em;
+          background: #f3f3f3;
+          text-rendering: optimizeLegibility;
+          text-align: center;
+      }
+      a {
+        color: #6f574d;
+      }
+      .info, .vegas-timer {
+        visibility: hidden;
+      }
+      .error-wrapper, #music {
+        display: none;
+      }
+  body 
+    audio(id='music', controls, loop, preload='auto')
+      source(src='./audio/bg.mp3')    
+    div(class='container')
+      div(class='error-wrapper px-4 py-2')
+        div(class='man-icon')
+        h3(class='title text mb-1') Woooaaahhhh!!
+        div(class='info').
+          hewe we go, cause we'we fanboy & chum chum!!
+          a wittwe cuckoo, fanboy & chum chum
+          we'we amazing, totawwy cwazy
+          fanboy, chum chum, come on, evewybody, sing!!
+          we'we gonna scweam at the top of ouw wungs!!
+          we'we gonna fwy and have some fun!!
+          we don't cawe, if chu stawe, i mwean, wook at ouw undewweaw!!
+          braaaaaiiiiin freeeeeeezzze!! ooooooooh...Brain freeze!!
+
+          buh-buh-ba-ba-ba-ba-ba-ba, buh-buh-ba-ba-ba ba-ba ba-ba
+          bwah bwah, bwah bwah, buh-buh-ba-ba-ba-ba-bwah!!
+          so come and scweam at the top of youw wungs!!
+          come and fwy and have some fun!!
+          buh-buh-bwah, buh-buh-bwah, buh, bwah, bwah, fanboy & chum chum! OwO
+        form(id='login', class='form-inline justify-content-center')
+          div(class='form-group my-2 mt-3')
+            label(class='sr-only') Password
+            input(type='password', class='form-control', id='pass', name='pass', placeholder='Password')
+            button(type='submit' class='btn btn-primary mx-1') Confirm identity
+        p(class='contact mt-2', style="visibility:hidden")
+          a(href='mailto:naufal@uwufan.club') naufal@uwufan.club
+        script(src='./js/home.js')
+        if user.login
+          script.
+            var authorized = true;
+            $( ".info" ).html('Chu\'we awweady wogged in, fetching uwu fwom node..</i>').delay(1500).visible();
+            $( "#login" ).submit();
+        else
+          script.
+            $( ".info" ).visible();
+            $( ".info" ).fadeIn();
+//-  footer
+//-   include partials/footer.pug
